@@ -1,0 +1,108 @@
+package ru.puchkova.gradwork;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SettingsActivity extends AppCompatActivity {
+
+    private EditText lastPass;
+    private EditText newPass;
+    private Spinner language;
+    private Spinner theme;
+    private ImageButton accept;
+    private ImageButton cancel;
+
+    private static final String EMPTY = "";
+
+    private static final int EMPTY_PASSES = 0;
+    private static final int EMPTY_LAST = -1;
+    private static final int EMPTY_NEW = -2;
+    private static final int NOT_ENPTY = 1;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_settings);
+
+        init();
+    }
+
+    public void init(){
+        lastPass = findViewById(R.id.lastPass);
+        newPass = findViewById(R.id.newPass);
+        language = findViewById(R.id.language);
+        theme = findViewById(R.id.theme);
+        accept = findViewById(R.id.accept);
+        cancel = findViewById(R.id.cancel);
+
+        setOnClick();
+        initSpinnerLanguage();
+        initSpinnerTheme();
+    }
+
+    public void setOnClick(){
+        cancel.setOnClickListener(cancelOnclickListener);
+        accept.setOnClickListener(acceptOnClickListener);
+    }
+
+    private void initSpinnerLanguage() {
+        ArrayAdapter<CharSequence> adapterLanguage = ArrayAdapter.createFromResource(this, R.array.language, android.R.layout.simple_spinner_item);
+        adapterLanguage.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        language.setAdapter(adapterLanguage);
+    }
+
+    private void initSpinnerTheme() {
+        ArrayAdapter<CharSequence> adapterColor = ArrayAdapter.createFromResource(this, R.array.theme, android.R.layout.simple_spinner_item);
+        adapterColor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        theme.setAdapter(adapterColor);
+    }
+
+    View.OnClickListener cancelOnclickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            finish();
+        }
+    };
+
+    View.OnClickListener acceptOnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int passAnswer = isPassNotEmpty();
+            if (passAnswer == EMPTY_LAST){
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "Не введен прошлый пароль.", Toast.LENGTH_SHORT);
+                toast.show();
+            } else if(passAnswer == EMPTY_NEW){
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "Не введен новый пароль", Toast.LENGTH_SHORT);
+                toast.show();
+            } else if(passAnswer == NOT_ENPTY){
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "Два пароля введены", Toast.LENGTH_SHORT);
+                toast.show();
+            }else {
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "пусто", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        }
+    };
+
+    public int isPassNotEmpty(){
+        if(lastPass.getText().toString().equals(EMPTY) && newPass.getText().toString().equals(EMPTY))
+            return EMPTY_PASSES;
+        else if(lastPass.getText().toString().equals(EMPTY))
+            return EMPTY_LAST;
+        else if(newPass.getText().toString().equals(EMPTY))
+            return EMPTY_NEW;
+        else
+            return NOT_ENPTY;
+    }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menu_width">130dp</dimen>
+    <dimen name="notes_width">285dp</dimen>
+    <dimen name="menu_weight">0.3</dimen>
+    <dimen name="notes_weight">0.7</dimen>
+    <dimen name="list_margin">10dp</dimen>
+    <dimen name="spinner_width">250dp</dimen>
+    <dimen name="spinner_height">45dp</dimen>
+    <dimen name="settings_text">20sp</dimen>
+    <dimen name="pass_length">4</dimen>
+</resources>

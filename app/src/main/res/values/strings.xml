@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Заметки</string>
+    <string name="change_pass">Смена пароля:</string>
+    <string name="change_theme">Выбор темы:</string>
+    <string name="change_language">Выбор языка:</string>
+    <string name="input_pass">Введите новый пароль</string>
+    <string name="input_pass_last">Введите старый пароль</string>
+
+    <string name="pass_log">Введите пароль:</string>
+    <string name="log_log">Введите логин:</string>
+    <string name="i_pass_log">Пароль</string>
+    <string name="i_log_log">Логин</string>
+    <string name="new_user">&#8195;Новый пользователь</string>
+
+    <string name="title_here">Введите заголовок тут</string>
+    <string name="text_here">Введите техт вашей заметки тут</string>
+    <string name="deadline">Дедлайн:&#8195;</string>
+
+    <string-array name="language">
+        <item>Русский</item>
+        <item>Английский</item>
+    </string-array>
+
+    <string-array name="theme">
+        <item>Жёлтая</item>
+        <item>Чёрная</item>
+        <item>Сиреневая</item>
+        <item>Голубая</item>
+        <item>Бежевая</item>
+    </string-array>
+</resources>
