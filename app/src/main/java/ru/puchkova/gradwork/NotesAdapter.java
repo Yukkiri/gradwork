@@ -11,11 +11,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
+import java.util.ArrayList;
 
 
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> {
-    private List<Notes> notes;
+    private ArrayList<Notes> notes;
     private LayoutInflater inflater;
 
     private CompoundButton.OnCheckedChangeListener myCheckChangeList
@@ -25,7 +25,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
         }
     };
 
-    NotesAdapter(Context context, List<Notes> notes) {
+    NotesAdapter(Context context, ArrayList<Notes> notes) {
         this.notes = notes;
         this.inflater = LayoutInflater.from(context);;
     }
@@ -69,28 +69,4 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
             TextView deadline = view.findViewById(R.id.deadline);
         }
     }
-
-   /* @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View view = convertView;
-        if (view == null) {
-            view = inflater.inflate(R.layout.notes_list, parent, false);
-        }
-
-        Notes note = notes.get(position);
-
-        CheckBox checkBox = view.findViewById(R.id.checkbox);
-        TextView title = view.findViewById(R.id.title);
-        TextView description = view.findViewById(R.id.description);
-        TextView deadline = view.findViewById(R.id.deadline);
-
-        title.setText(note.getTitle());
-        description.setText(note.getDescription());
-        deadline.setText(note.getDeadline());
-        checkBox.setOnCheckedChangeListener(myCheckChangeList);
-        checkBox.setTag(position);
-        checkBox.setChecked(note.isCheck());
-
-        return view;
-    }*/
 }

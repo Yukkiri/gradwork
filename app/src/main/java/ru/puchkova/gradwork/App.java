@@ -31,18 +31,14 @@ public class App extends Application {
 
     public void createNote(String title, String description, long deadline){
         notesList.addNote(userId, title, description, deadline, this);
+        notesAdapter.notifyDataSetChanged();
     }
 
-    public RecyclerView.Adapter<NotesAdapter.ViewHolder> setAdapter(){
-        notes = notesList.getNotesList(userId, this);
-        /*
-        Кажется проблема не в этом
-        if(notes == null){
-            notes = new ArrayList<>();
-            note = new Notes(userId, "meow", "why??", "no", false);
-            notes.add(note);
-        }
-         */
+    public ArrayList<Notes> getNotes(){
+        return notes = notesList.getNotesList(userId, this);
+    }
+
+    public RecyclerView.Adapter<NotesAdapter.ViewHolder> setAdapter(ArrayList<Notes> notes){
         notesAdapter = new NotesAdapter(this, notes);
         return notesAdapter;
     }
