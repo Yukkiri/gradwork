@@ -104,6 +104,8 @@ public class SettingsActivity extends AppCompatActivity {
         }
     };
 
+
+    //???????????????????
     public void changeLanguage(){
         Locale localeRu = new Locale("ru");
         Locale localeEn = new Locale("en");
@@ -130,6 +132,7 @@ public class SettingsActivity extends AppCompatActivity {
             return NOT_EMPTY;
     }
 
+    /*
     @IntDef({Color.YELLOW, Color.BLACK, Color.LILAC, Color.CYAN, Color.BEIGE})
     private @interface Color {
         int YELLOW = 0;
@@ -138,21 +141,11 @@ public class SettingsActivity extends AppCompatActivity {
         int CYAN = 3;
         int BEIGE = 4;
     }
+     */
 
     private void setColor(int color){
         switch (color){
-            /*
-            case 0:
-                Utils.changeToTheme(this, Utils.THEME_RED);
-                break;
-            case 1:
-                Utils.changeToTheme(this, Utils.THEME_DEFAULT);
-                break;
-            case 2:
-                Utils.changeToTheme(this, Utils.THEME_BLUE);
-                break;
 
-             */
         }
     }
 }
