@@ -7,70 +7,65 @@
 
     <TextView
         android:id="@+id/w_log"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextStart"
         android:text="@string/log_log"
-        android:textSize="@dimen/settings_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="@+id/log"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0" />
 
     <EditText
         android:id="@+id/log"
-        android:layout_width="@dimen/spinner_width"
-        android:layout_height="@dimen/spinner_height"
-        android:textSize="@dimen/settings_text"
+        style="@style/TextEditStart"
         android:hint="@string/i_log_log"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/settings_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintTop_toBottomOf="@+id/w_log" />
 
     <TextView
         android:id="@+id/w_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextStart"
         android:text="@string/pass_log"
-        android:textSize="@dimen/settings_text"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="@+id/pass"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintTop_toBottomOf="@+id/log" />
 
     <EditText
         android:id="@+id/pass"
-        android:layout_width="@dimen/spinner_width"
-        android:layout_height="@dimen/spinner_height"
-        android:textSize="@dimen/settings_text"
+        style="@style/TextEditStart"
         android:hint="@string/i_pass_log"
         android:maxLength="4"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/settings_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/w_pass"/>
+
+    <ImageButton
+        android:id="@+id/show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/eye_open_opacity"
+        android:layout_marginEnd="@dimen/margin_show"
+        app:layout_constraintEnd_toEndOf="@id/pass"
+        app:layout_constraintTop_toTopOf="@id/pass"
+        app:layout_constraintBottom_toBottomOf="@id/pass" />
 
     <CheckBox
         android:id="@+id/newbie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/settings_text"
+        style="@style/TextStart"
         android:text="@string/new_user"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/settings_text"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655" />
+        app:layout_constraintTop_toBottomOf="@+id/pass" />
 
     <ImageButton
         android:id="@+id/accept"
+        style="@style/StartNumbers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/accept"
@@ -92,5 +87,97 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95" />
+
+    <Button
+        android:id="@+id/one"
+        style="@style/StartNumbers"
+        android:text="@string/one"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/two"
+        app:layout_constraintStart_toStartOf="@+id/newbie"
+        app:layout_constraintTop_toBottomOf="@+id/newbie" />
+
+    <Button
+        android:id="@+id/two"
+        style="@style/StartNumbers"
+        android:text="@string/two"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/three"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/one"
+        app:layout_constraintTop_toBottomOf="@+id/newbie" />
+
+    <Button
+        android:id="@+id/three"
+        style="@style/StartNumbers"
+        android:text="@string/three"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/newbie"
+        app:layout_constraintStart_toEndOf="@+id/two"
+        app:layout_constraintTop_toBottomOf="@+id/newbie" />
+
+    <Button
+        android:id="@+id/four"
+        style="@style/StartNumbers"
+        android:text="@string/four"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/five"
+        app:layout_constraintStart_toStartOf="@+id/newbie"
+        app:layout_constraintTop_toBottomOf="@+id/one" />
+
+    <Button
+        android:id="@+id/five"
+        style="@style/StartNumbers"
+        android:text="@string/five"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/six"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/four"
+        app:layout_constraintTop_toBottomOf="@+id/two" />
+
+    <Button
+        android:id="@+id/six"
+        style="@style/StartNumbers"
+        android:text="@string/six"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/newbie"
+        app:layout_constraintStart_toEndOf="@+id/five"
+        app:layout_constraintTop_toBottomOf="@+id/three" />
+
+    <Button
+        android:id="@+id/seven"
+        style="@style/StartNumbers"
+        android:text="@string/seven"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/eight"
+        app:layout_constraintStart_toStartOf="@+id/newbie"
+        app:layout_constraintTop_toBottomOf="@+id/four" />
+
+    <Button
+        android:id="@+id/eight"
+        style="@style/StartNumbers"
+        android:text="@string/eight"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/nine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seven"
+        app:layout_constraintTop_toBottomOf="@+id/five" />
+
+    <Button
+        android:id="@+id/nine"
+        style="@style/StartNumbers"
+        android:text="@string/nine"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/newbie"
+        app:layout_constraintStart_toEndOf="@+id/eight"
+        app:layout_constraintTop_toBottomOf="@+id/six" />
+
+    <Button
+        android:id="@+id/zero"
+        style="@style/StartNumbers"
+        android:text="@string/zero"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/eight"
+        app:layout_constraintStart_toStartOf="@id/eight" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppThemeYellow" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primaryYellow</item>
+        <item name="colorPrimaryDark">@color/primaryDarkYellow</item>
+        <item name="colorAccent">@color/accentYellow</item>
+        <item name="actionBarStyle">@style/ActionBar</item>
+        <item name="android:background">@color/backgroundYellow</item>
+        <item name="android:textSize">@dimen/settings_text</item>
+        <item name="android:typeface">monospace</item>
+
+
+        <item name="start_button_text">@color/backgroundYellow</item>
+        <item name="text_title">@color/textTitleYellow</item>
+        <item name="main_text">@color/textYellow</item>
+        <item name="note_background">@color/primaryDarkYellow</item>
+        <item name="calendar_time_background">@color/hintYellow</item>
+        <item name="recycler_background">@color/yellow</item>
+        <item name="action_bar_background">@color/primaryYellow</item>
+        <item name="action_bar_text">@color/accentYellow</item>
+    </style>
+
+    <style name="ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">?attr/action_bar_background</item>
+        <item name="titleTextStyle">@style/ActionBarText</item>
+    </style>
+
+    <style name="ActionBarText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">?attr/action_bar_text</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">@dimen/actionBar_text_size</item>
+    </style>
+---------------------------------------
+
+    <style name="StartNumbers">
+        <item name="android:background">@drawable/button_start_yellow</item>
+        <item name="android:layout_height">@dimen/start_button</item>
+        <item name="android:layout_width">@dimen/start_button</item>
+        <item name="android:layout_marginTop">@dimen/start_button_margin</item>
+        <item name="android:textColor">?attr/start_button_text</item>
+    </style>
+
+    <style name="TextStart">
+        <item name="android:layout_marginTop">@dimen/start_margin</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/text_title</item>
+    </style>
+
+    <style name="TextEditStart">
+        <item name="android:layout_marginTop">@dimen/list_margin</item>
+        <item name="android:layout_height">@dimen/spinner_height</item>
+        <item name="android:layout_width">@dimen/spinner_width</item>
+        <item name="android:textColor">?attr/text_title</item>
+    </style>
+---------------------------------------
+    <style name="Deadline">
+        <item name="android:layout_marginTop">@dimen/margin_list_text</item>
+        <item name="android:layout_marginStart">@dimen/list_margin</item>
+        <item name="android:textSize">@dimen/notes_text</item>
+        <item name="android:textColor">?attr/text_title</item>
+    </style>
+
+    <style name="TextEditNoteTitle">
+        <item name="android:layout_marginTop">@dimen/list_margin</item>
+        <item name="android:textColor">?attr/text_title</item>
+        <item name="android:layout_marginStart">@dimen/margin_note</item>
+        <item name="android:layout_marginEnd">@dimen/margin_note</item>
+    </style>
+
+    <style name="TextEditNote">
+        <item name="android:textColor">?attr/main_text</item>
+        <item name="android:background">?attr/note_background</item>
+        <item name="android:layout_marginStart">@dimen/margin_note</item>
+        <item name="android:layout_marginEnd">@dimen/margin_note</item>
+    </style>
+
+    <style name="Calendar">
+        <item name="android:background">?attr/calendar_time_background</item>
+        <item name="android:textColor">?attr/start_button_text</item>
+    </style>
+
+    <style name="TimePicker">
+        <item name="android:numbersBackgroundColor">?attr/calendar_time_background</item>
+        <item name="android:numbersTextColor">?attr/start_button_text</item>
+    </style>
+---------------------------------------
+    
+    <style name="AppText">
+        <item name="android:layout_marginStart">@dimen/list_margin</item>
+        <item name="android:layout_marginTop">@dimen/list_margin</item>
+        <item name="android:layout_marginBottom">@dimen/list_margin</item>
+        <item name="android:textSize">@dimen/notes_text</item>
+        <item name="android:textColor">@color/textYellow</item>
+    </style>
+
+    <style name="AppTextTitle">
+        <item name="android:layout_marginTop">@dimen/list_margin</item>
+        <item name="android:layout_marginStart">@dimen/list_margin</item>
+        <item name="android:layout_marginEnd">@dimen/margin_list_text</item>
+        <item name="android:textColor">@color/textTitleYellow</item>
+    </style>
+
+    <style name="AppTextDeadline">
+        <item name="android:layout_marginStart">@dimen/list_margin</item>
+        <item name="android:textSize">@dimen/notes_text</item>
+        <item name="android:textColor">@color/textYellow</item>
+    </style>
+
+    <style name="AppRecycler">
+        <item name="android:background">@color/yellow</item>
+    </style>
+
+    <style name="TextEdit">
+        <item name="android:textColor">@color/textYellow</item>
+        <item name="android:background">@color/primaryDarkYellow</item>
+        <item name="android:textSize">@dimen/notes_text</item>
+    </style>
+</resources>

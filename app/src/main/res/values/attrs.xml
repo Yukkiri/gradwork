@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="text_title" format="color"/>
+    <attr name="start_button_text" format="color"/>
+    <attr name="main_text" format="color"/>
+    <attr name="note_deadline_text" format="color"/>
+    <attr name="note_background" format="color"/>
+    <attr name="calendar_time_background" format="color"/>
+    <attr name="recycler_background" format="color"/>
+    <attr name="action_bar_background" format="color"/>
+    <attr name="action_bar_text" format="color"/>
+</resources>

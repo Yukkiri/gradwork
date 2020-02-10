@@ -1,13 +1,13 @@
 package ru.puchkova.gradwork;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -18,12 +18,15 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView notesList;
     private App app;
     private ArrayList<Notes> notes;
+    RecyclerView.Adapter adapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        app = (App)MainActivity.this.getApplication();
 
         init();
     }
@@ -36,9 +39,16 @@ public class MainActivity extends AppCompatActivity {
         add.setOnClickListener(addOnclickListener);
         settings.setOnClickListener(settingsOnClickListener);
 
-        app = (App)MainActivity.this.getApplication();
+
+
+    }
+
+
+    private void setAdapter(){
         notes = app.getNotes();
-        notesList.setAdapter(app.setAdapter(notes));
+        notesList.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        adapter = app.setAdapter(notes);
+        notesList.setAdapter(adapter);
     }
 
     View.OnClickListener settingsOnClickListener = new View.OnClickListener() {
@@ -57,4 +67,23 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    //это очень неправильно и косо, но я не сообразила, как сделать иначе
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setAdapter();
+    }
 }
+
+
+/*
+ToDo list:
+ 1. Темы
+ 2. Языки
+ 3. Подумать над уведомлением адаптера
+ 4. Добавить отображение только избранного
+ 5. Проверить почему отнимает полчаса
+ 6. Смена пароля
+ 7. авторизация после сворачивания
+ 8. Шифрование пароля
+ */

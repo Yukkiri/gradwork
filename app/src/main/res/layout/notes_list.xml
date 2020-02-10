@@ -1,46 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppRecycler"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
+    android:id="@+id/notes_list"
+    android:layout_marginTop="@dimen/list_margin"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/list_margin"
+        android:button="@drawable/checkbox"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/title"
         app:layout_constraintBottom_toBottomOf="@id/description"/>
 
     <TextView
         android:id="@+id/title"
+        style="@style/AppTextTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/list_margin"
-        android:text="title"
+        app:layout_constraintEnd_toStartOf="@+id/deadline"
         app:layout_constraintStart_toEndOf="@id/checkBox"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0"/>
 
     <TextView
+        style="@style/AppText"
         android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/list_margin"
-        android:text="description"
         app:layout_constraintStart_toEndOf="@id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
+        style="@style/AppTextDeadline"
         android:id="@+id/deadline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Deadline"
         android:layout_marginEnd="@dimen/list_margin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/title" />
 
 
 

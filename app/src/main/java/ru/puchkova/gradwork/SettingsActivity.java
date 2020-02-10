@@ -1,5 +1,6 @@
 package ru.puchkova.gradwork;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -8,7 +9,10 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.annotation.IntDef;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Locale;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -19,12 +23,15 @@ public class SettingsActivity extends AppCompatActivity {
     private ImageButton accept;
     private ImageButton cancel;
 
+    private final String OLD_PASS = getString(R.string.old_pass_empty);
+    private final String NEW_PASS = getString(R.string.new_pass_empty);
+
     private static final String EMPTY = "";
 
     private static final int EMPTY_PASSES = 0;
     private static final int EMPTY_LAST = -1;
     private static final int EMPTY_NEW = -2;
-    private static final int NOT_ENPTY = 1;
+    private static final int NOT_EMPTY = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,13 +84,15 @@ public class SettingsActivity extends AppCompatActivity {
             int passAnswer = isPassNotEmpty();
             if (passAnswer == EMPTY_LAST){
                 Toast toast = Toast.makeText(getApplicationContext(),
-                        "Не введен прошлый пароль.", Toast.LENGTH_SHORT);
+                        OLD_PASS, Toast.LENGTH_SHORT);
                 toast.show();
             } else if(passAnswer == EMPTY_NEW){
                 Toast toast = Toast.makeText(getApplicationContext(),
-                        "Не введен новый пароль", Toast.LENGTH_SHORT);
+                        NEW_PASS, Toast.LENGTH_SHORT);
                 toast.show();
-            } else if(passAnswer == NOT_ENPTY){
+            } else if(passAnswer == NOT_EMPTY){
+
+                //тут
                 Toast toast = Toast.makeText(getApplicationContext(),
                         "Два пароля введены", Toast.LENGTH_SHORT);
                 toast.show();
@@ -95,6 +104,21 @@ public class SettingsActivity extends AppCompatActivity {
         }
     };
 
+    public void changeLanguage(){
+        Locale localeRu = new Locale("ru");
+        Locale localeEn = new Locale("en");
+        Configuration config = new Configuration();
+        String languageString = language.getSelectedItem().toString();
+        if (languageString.equals("English")){
+            config.setLocale(localeEn);
+        } else {
+            config.setLocale(localeRu);
+            getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        }
+        getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        recreate();
+    }
+
     public int isPassNotEmpty(){
         if(lastPass.getText().toString().equals(EMPTY) && newPass.getText().toString().equals(EMPTY))
             return EMPTY_PASSES;
@@ -103,6 +127,32 @@ public class SettingsActivity extends AppCompatActivity {
         else if(newPass.getText().toString().equals(EMPTY))
             return EMPTY_NEW;
         else
-            return NOT_ENPTY;
+            return NOT_EMPTY;
+    }
+
+    @IntDef({Color.YELLOW, Color.BLACK, Color.LILAC, Color.CYAN, Color.BEIGE})
+    private @interface Color {
+        int YELLOW = 0;
+        int BLACK = 1;
+        int LILAC = 2;
+        int CYAN = 3;
+        int BEIGE = 4;
+    }
+
+    private void setColor(int color){
+        switch (color){
+            /*
+            case 0:
+                Utils.changeToTheme(this, Utils.THEME_RED);
+                break;
+            case 1:
+                Utils.changeToTheme(this, Utils.THEME_DEFAULT);
+                break;
+            case 2:
+                Utils.changeToTheme(this, Utils.THEME_BLUE);
+                break;
+
+             */
+        }
     }
 }

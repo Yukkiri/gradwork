@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="change_pass">Change your password:</string>
+    <string name="change_theme">Theme:</string>
+    <string name="change_language">Language:</string>
+    <string name="input_pass">New password</string>
+    <string name="input_pass_last">Current password</string>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+
+    <string name="pass_log">Enter your password:</string>
+    <string name="log_log">Enter your login:</string>
+    <string name="i_pass_log">Password</string>
+    <string name="i_log_log">Login</string>
+    <string name="new_user">&#8195;New user</string>
+
+    <string name="title_here">Text your note\'s title</string>
+    <string name="deadline">Deadline:&#8195;</string>
+
+    <string name="settings">Settings</string>
+    <string name="new_note">New note</string>
+
+    <string name="deadline_date">Choose deadline date</string>
+    <string name="deadline_time">Choose deadline time</string>
+
+    <string name="old_pass_empty">Current password is empty</string>
+    <string name="new_pass_empty">New password is empty</string>
+
+    <string name="error_pass">Wrong password</string>
+    <string name="error_log">Invalid login</string>
+    <string name="error_short">Password is too short</string>
+    <string name="error_long">Password is too long</string>
+    <string name="error_empty">Fill in all the fields</string>
+
+    <string-array name="language">
+        <item>Russian</item>
+        <item>English</item>
+    </string-array>
+
+    <string-array name="theme">
+        <item>Yellow</item>
+        <item>Black</item>
+        <item>Lilac</item>
+        <item>Cyan</item>
+        <item>Beige</item>
+    </string-array>
+</resources>

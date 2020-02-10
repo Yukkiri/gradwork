@@ -1,12 +1,10 @@
 package ru.puchkova.gradwork;
 
 import android.app.Application;
-import android.content.Context;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class App extends Application {
 
@@ -21,7 +19,6 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
 
-        //note =
     }
 
     public int getId(String login, String pass, Boolean isNew){
@@ -30,8 +27,7 @@ public class App extends Application {
     }
 
     public void createNote(String title, String description, long deadline){
-        notesList.addNote(userId, title, description, deadline, this);
-        notesAdapter.notifyDataSetChanged();
+        notes = notesList.addNote(userId, title, description, deadline, this);
     }
 
     public ArrayList<Notes> getNotes(){
@@ -40,6 +36,11 @@ public class App extends Application {
 
     public RecyclerView.Adapter<NotesAdapter.ViewHolder> setAdapter(ArrayList<Notes> notes){
         notesAdapter = new NotesAdapter(this, notes);
+
         return notesAdapter;
+    }
+
+    public void changeNote(Notes note){
+        notesList.saveNote(userId, note, this);
     }
 }

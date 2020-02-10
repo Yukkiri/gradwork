@@ -4,7 +4,18 @@
     <string name="change_theme">Выбор темы:</string>
     <string name="change_language">Выбор языка:</string>
     <string name="input_pass">Введите новый пароль</string>
-    <string name="input_pass_last">Введите старый пароль</string>
+    <string name="input_pass_last">Введите текущий пароль</string>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
 
     <string name="pass_log">Введите пароль:</string>
     <string name="log_log">Введите логин:</string>
@@ -12,10 +23,25 @@
     <string name="i_log_log">Логин</string>
     <string name="new_user">&#8195;Новый пользователь</string>
 
-    <string name="title_here">Введите заголовок тут</string>
-    <string name="text_here">Введите техт вашей заметки тут</string>
+    <string name="title_here">Введите заголовок</string>
     <string name="deadline">Дедлайн:&#8195;</string>
 
+    <string name="settings">Настройки</string>
+    <string name="new_note">Новая заметка</string>
+    
+    <string name="deadline_date">Выберите дату дедлайна</string>
+    <string name="deadline_time">Выберите время дедлайна</string>
+    
+    <string name="old_pass_empty">Не введен старый пароль</string>
+    <string name="new_pass_empty">Не введен новый пароль</string>
+
+    <string name="error_pass">Неверный пароль</string>
+    <string name="error_log">Несуществующий логин</string>
+    <string name="error_short">Слишком короткий пароль</string>
+    <string name="error_long">Слишком длинный пароль</string>
+    <string name="error_empty">Введите все данные</string>
+
+    
     <string-array name="language">
         <item>Русский</item>
         <item>Английский</item>

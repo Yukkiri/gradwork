@@ -3,4 +3,17 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="deadlineColor">#A3961E</color>
+
+    <color name="primaryYellow">#FDF286</color>
+    <color name="primaryDarkYellow">#FBEC5D</color>
+    <color name="yellow">#FDF286</color>
+    <color name="accentYellow">#7149AA</color>
+    <color name="hintYellow">#AE92D5</color>
+    <color name="textYellow">#A3961E</color>
+    <color name="textTitleYellow">#3C186F</color>
+    <color name="backgroundYellow">#FDF5A5</color>
+    <color name="lightYellow">#AE92D5</color>
+    <color name="startYellow">#7149AA</color>
+
 </resources>
