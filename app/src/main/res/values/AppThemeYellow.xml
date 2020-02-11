@@ -92,29 +92,29 @@
         <item name="android:layout_marginTop">@dimen/list_margin</item>
         <item name="android:layout_marginBottom">@dimen/list_margin</item>
         <item name="android:textSize">@dimen/notes_text</item>
-        <item name="android:textColor">@color/textYellow</item>
+        <item name="android:textColor">?attr/main_text</item>
     </style>
 
     <style name="AppTextTitle">
         <item name="android:layout_marginTop">@dimen/list_margin</item>
         <item name="android:layout_marginStart">@dimen/list_margin</item>
         <item name="android:layout_marginEnd">@dimen/margin_list_text</item>
-        <item name="android:textColor">@color/textTitleYellow</item>
+        <item name="android:textColor">?attr/text_title</item>
     </style>
 
     <style name="AppTextDeadline">
         <item name="android:layout_marginStart">@dimen/list_margin</item>
         <item name="android:textSize">@dimen/notes_text</item>
-        <item name="android:textColor">@color/textYellow</item>
+        <item name="android:textColor">?attr/main_text</item>
     </style>
 
     <style name="AppRecycler">
-        <item name="android:background">@color/yellow</item>
+        <item name="android:background">?attr/recycler_background</item>
     </style>
 
     <style name="TextEdit">
-        <item name="android:textColor">@color/textYellow</item>
-        <item name="android:background">@color/primaryDarkYellow</item>
+        <item name="android:textColor">?attr/main_text</item>
+        <item name="android:background">?attr/note_background</item>
         <item name="android:textSize">@dimen/notes_text</item>
     </style>
 </resources>
